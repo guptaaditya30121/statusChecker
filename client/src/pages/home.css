@@ -1,0 +1,24 @@
+.content{
+    margin-top: 20vh;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 0.1rem;
+    margin-bottom: 10vh;
+}
+.cards{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 25vh;
+}
+.card{
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    cursor: pointer;
+}
+.card:hover{
+    font-size: larger;
+}
+.card img{
+    height: 20vw;
+}

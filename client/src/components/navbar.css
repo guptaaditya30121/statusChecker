@@ -1,0 +1,80 @@
+.navbar{
+    display: grid;
+    /* grid-template-columns: 0.2fr 0.25fr 0.3fr 0.25fr 0.3fr 1fr; */
+    grid-template-columns: 11vw 11vw 11vw 11vw 11vw 40vw;
+    
+    align-items: center; 
+        border-bottom: solid black;
+        height: 8vh; 
+        position: fixed;
+        top: 0;
+        width: 100%;
+    z-index: 2;
+    background-color: white;
+}
+.navlink{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 5px;
+    height: 4vh;
+    text-decoration: none;
+   
+    color: black;
+}
+.navlink:hover{
+   text-decoration: underline;
+  
+}
+.navlink2{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 5px;
+    height: 4vh;
+    text-decoration: none;
+    background-color:  #027F9B;
+   color: white;
+}
+.navlink2:hover{
+  
+  font-size: 22px;
+}
+.navlink1{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20vw;
+    padding: 5px;
+    height: 4vh;
+    text-decoration: none;
+   
+    color: black;
+}
+.navlink1:hover{
+   text-decoration: underline;
+   
+   cursor: pointer;
+}
+.navlink12{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20vw;
+    padding: 5px;
+    height: 4vh;
+    text-decoration: none;
+    background-color:  #027F9B;
+   color: white;
+}
+.navlink12:hover{
+   text-decoration: underline;
+   font-size: larger;
+   cursor: pointer;
+}
