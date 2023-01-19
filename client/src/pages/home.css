@@ -4,6 +4,7 @@
     font-family: 'Playfair Display', serif;
     letter-spacing: 0.1rem;
     margin-bottom: 10vh;
+    
 }
 .cards{
     display: flex;
@@ -15,10 +16,17 @@
     text-align: center;
     font-family: 'Playfair Display', serif;
     cursor: pointer;
+   
+}
+.text{
+   color: black;
+   text-decoration:underline ;
 }
 .card:hover{
     font-size: larger;
+   
 }
 .card img{
     height: 20vw;
+    width: 30vw;
 }

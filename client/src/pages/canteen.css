@@ -1,0 +1,43 @@
+.content1{
+    margin-top: 10vh;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 0.1rem;  
+    font-size: 25px;
+}
+
+.cards1{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 0.1rem;  
+    font-weight: 100; 
+    font-size: 15px;
+}
+.card1{
+    margin: 10px;
+    text-align: center;
+}
+.card1 img{
+    height: 150px;
+    width: 250px;
+    margin: 0px;
+    padding: 0px;
+}
+.cards12{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 0.1rem; 
+    opacity: 0.5;
+    font-weight: 100; 
+    font-size: 15px;
+}
+.ab{
+    margin: 5px;
+    text-transform: capitalize;
+}

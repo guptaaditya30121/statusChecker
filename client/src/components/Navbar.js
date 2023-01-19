@@ -1,21 +1,22 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../components/navbar.css';
 
 export default function Navbar({count = 1}) {
   return (
     <div className='navbar'>
-    {count==1 && <div className='navlink2' href=''>Home</div>}
-    {count!=1 && <div className='navlink' href=''>Home</div>}
-    {count==2 && <div className='navlink2' href=''>Canteens</div>}
-    {count!=2 && <div className='navlink' href=''>Canteens</div>}
-    {count==3 && <div className='navlink2' href=''>Juice Centres</div>}
-    {count!=3 && <div className='navlink' href=''>Juice Centres</div>}
-    {count==4 && <div className='navlink2' href=''>Stationary</div>}
-    {count!=4 && <div className='navlink' href=''>Stationary</div>}
-    {count==5 && <div className='navlink2' href=''>Update Status</div>}
-    {count!=5 && <div className='navlink' href=''>Update Status</div>}
-    {count==6 && <div className='navlink12' href=''>About me</div>}
-    {count!=6 && <div className='navlink1' href=''>About me</div>}
+    {count==1 && <Link to="/" className='navlink2' >Home</Link>}
+    {count!=1 && <Link to="/" className='navlink' >Home</Link>}
+    {count==2 && <Link to="/Canteens" className='navlink2'>Canteens</Link>}
+    {count!=2 && <Link to="/Canteens" className='navlink' >Canteens</Link>}
+    {count==3 && <Link to="/Juice-centres" className='navlink2'>Juice Centres</Link>}
+    {count!=3 && <Link to="/Juice-centres" className='navlink' >Juice Centres</Link>}
+    {count==4 && <Link to="/Stationaries" className='navlink2'>Stationary</Link>}
+    {count!=4 && <Link to="/Stationaries" className='navlink' >Stationary</Link>}
+    {count==5 && <Link to="/Status-updates" className='navlink2'>Update Status</Link>}
+    {count!=5 && <Link to="/Status-updates" className='navlink' >Update Status</Link>}
+    {count==6 && <Link className='navlink12'>About me</Link>}
+    {count!=6 && <Link className='navlink1'>About me</Link>}
     </div>
   )
 }
