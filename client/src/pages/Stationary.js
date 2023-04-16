@@ -3,7 +3,7 @@ import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import '../pages/canteen.css'
 import { useState , useEffect } from 'react';
-const API_BASE = "http://localhost:3001";
+const API_BASE = "http://localhost:3002";
 
 export default function Stationary() {
     const [shops , setShops] = useState([]);
@@ -37,8 +37,8 @@ export default function Stationary() {
             <div className="cards1">
                 {activeStationary.map(shop =>(
                     <div className='card1'>
-                    <h2 className='ab'>{shop.hostel}</h2>
-                    <img src={require(`../assets/${shop.hostel.toLowerCase()}.jpeg`)} alt="404" classname='img' />
+                    <h2 className='ab'>{shop.name}</h2>
+                    <img src={require(`../assets/${shop.name.toLowerCase()}.jpeg`)} alt="404" classname='img' />
                     </div>
                 ))}
 
@@ -49,8 +49,8 @@ export default function Stationary() {
             <div className="cards12">
                 {closedStationary.map(shop =>(
                     <div className='card1' >
-                    <h2 className='ab'>{shop.hostel}</h2>
-                    <img src={require(`../assets/${shop.hostel.toLowerCase()}.jpeg`)} alt="404" classname='img' />
+                    <h2 className='ab'>{shop.name}</h2>
+                    <img src={require(`../assets/${shop.name.toLowerCase()}.jpeg`)} alt="404" classname='img' />
                     </div>
                 ))}
             </div>

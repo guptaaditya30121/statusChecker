@@ -1,7 +1,7 @@
 .navbar{
     display: grid;
     /* grid-template-columns: 0.2fr 0.25fr 0.3fr 0.25fr 0.3fr 1fr; */
-    grid-template-columns: 11vw 11vw 11vw 11vw 11vw 40vw;
+    grid-template-columns: 11vw 11vw 11vw 11vw 11vw  11vw 29vw;
     
     align-items: center; 
         border-bottom: solid black;

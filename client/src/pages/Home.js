@@ -2,12 +2,14 @@ import React from 'react'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import { Link } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
 import '../pages/home.css';
 export default function Home() {
   return (
     <div >
+      
        <Navbar count={1}/>
-       <div className='content'>
+       <div className='heading'>
        <h1>WHAT YOU WANT TO LOOK FOR ... ?</h1>
        </div>
        <div className="cards">

@@ -1,11 +1,13 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-
+const bodyParser=require("body-parser");
 const app = express();
-
+const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
 app.use(express.json());
 app.use(cors());
+app.use(bodyParser.urlencoded({extended:true}));
 
 const url = "mongodb+srv://aditya:19172621@cluster0.wywcrgi.mongodb.net/statuschecker?retryWrites=true&w=majority";
 mongoose.connect(url,{
@@ -24,22 +26,40 @@ app.get('/shops',(req,res)=>{
 })
 
 app.post('/shops/new' , (req,res)=>{
-    const sho = new shop({
-        category : req.body.category,
-        hostel : req.body.hostel,
+    const newUser = new shop({
+        category : req.body.type,
+        name : req.body.fname,
+        username : req.body.username,
+        password : req.body.password,
         phone : req.body.phone,
-        status : req.body.status
+        status : true
     });
-    sho.save();
-    res.json(sho);
+    newUser.save();
+    res.json(newUser);
+    //alert.show("succesfully registered")
+   
+    //res.sendFile(path.join(__dirname, '../public', 'index.html'));
 })
+// app.post("/login",(request,response) => {
 
+// })
 app.put('/shops/change/:id' , async(req,res)=>{
     const sho = await shop.findById(req.params.id);
-    sho.status = !sho.status;
-    sho.save();
+    const passwordEnteredByUser = req.body.password;
+    const hash = sho.password;
+    bcrypt.compare(passwordEnteredByUser, hash, function(error, isMatch) {
+        if (error) {
+          console.log(error);
+        } else if (isMatch) {
+            sho.status = !sho.status;
+            sho.save();
+            res.status(200).end();
+        } else {
+          res.status(404).end();
+        }
+      })
+    
 
-    res.json(sho);
 })
 
 app.delete('/shops/delete/:id', (req,res)=>{
@@ -49,6 +69,10 @@ app.delete('/shops/delete/:id', (req,res)=>{
     
 })
 
-app.listen(3001,()=>{
+// app.post("/register" , (req,res)=>{
+
+// });
+
+app.listen(3002,()=>{
     console.log('server is listening');
 })

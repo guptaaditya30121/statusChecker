@@ -1,22 +1,62 @@
 const mongoose = require('mongoose');
+const bcrypt = require("bcryptjs")
 const Schema = mongoose.Schema;
 
 const allSchema = new Schema({
     category:{
         type: Number,
-        required: true
+        
     },
-    hostel:{
+    name:{
         type: String,
-        required: true
+       
     },
     phone:{
         type: String,
-        required: true
+        
     },
     status:{
         type: Boolean,
-        required: true
+        
+    },
+    username:{
+        type: String,
+        unique: [true , "Email Exists"],
+    },
+    //password: the salted and hashed representation of the user's password.
+    password:{
+        type: String,
+        
+    }
+
+})
+
+allSchema.pre("save",function(next){
+    const user = this
+    
+    if(this.isModified("password") || this.isNew) {
+        bcrypt.genSalt(10, function(saltError ,salt){
+            if(saltError)
+            {
+                
+                return next(saltError)
+            }
+            else
+            {
+                bcrypt.hash(user.password,salt,function(hashError , hash){
+                    if(hashError)
+                    {
+                        
+                        return next(hashError)
+                    }
+
+                    user.password = hash
+                    next()
+                })
+            }
+        })
+    }else{
+        return next()
     }
 })
 

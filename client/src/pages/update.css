@@ -40,3 +40,52 @@
     border-radius: 5px;
     
 }
+.butt:hover{
+    cursor: pointer;
+}
+.circle0{
+    height: 16px;
+    width: 16px;
+    border-radius: 100px;
+    border: 2px solid black;
+    background-color:rgb(255, 255, 255);
+    margin: 20px;
+}
+.circle1{
+    height: 16px;
+    width: 16px;
+    border-radius: 100px;
+    border: 2px solid black;
+    background-color:rgb(109, 219, 144);
+    margin: 20px;
+}
+.circle2{
+    height: 16px;
+    width: 16px;
+    border-radius: 100px;
+    border: 2px solid black;
+    background-color:rgb(221, 39, 39);
+    margin: 20px;
+}
+.cc{
+    display: flex;
+    
+}
+.buu{
+   
+   font-size: 12px; 
+   display: flex;
+   padding: 5px;
+   align-items:center;
+}
+.buu h3{
+    padding: 10px;
+    border: 2px solid white;
+    background-color: rgb(59, 58, 58);
+    color: white;
+    margin-right: 7vw;
+    margin-left: 2vw;
+}
+.buu h3:hover{
+    cursor: pointer;
+}

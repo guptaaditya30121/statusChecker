@@ -3,13 +3,13 @@ import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import '../pages/canteen.css'
 import { useState , useEffect } from 'react';
-const API_BASE = "http://localhost:3001";
+const API_BASE = "http://localhost:3002";
 
 export default function Canteen() {
     const [shops , setShops] = useState([]);
     useEffect(()=>{
         GetShops()
-        console.log(shops)
+        
     },[]);
 
     const GetShops = () =>{
@@ -21,6 +21,7 @@ export default function Canteen() {
         })
         .then(res=>res.json())
         .then(data=>setShops(data))
+        .then(()=>{console.log(shops)})
     }
     const activeCanteens = shops.filter(shop =>
         shop.category === 1 && shop.status === true
@@ -37,8 +38,8 @@ export default function Canteen() {
             <div className="cards1">
                 {activeCanteens.map(shop =>(
                     <div className='card1'>
-                    <h2 className='ab'>{shop.hostel}</h2>
-                    <img src={require(`../assets/${shop.hostel.toLowerCase()}.jpeg`)} alt="404" classname='img' />
+                    <h2 className='ab'>{shop.name}</h2>
+                    <img src={require(`../assets/${shop.name.toLowerCase()}.jpeg`)} alt="404" className='img' />
                     </div>
                 ))}
 
@@ -49,8 +50,8 @@ export default function Canteen() {
             <div className="cards12">
                 {closedCanteens.map(shop =>(
                     <div className='card1' >
-                    <h2 className='ab'>{shop.hostel}</h2>
-                    <img src={require(`../assets/${shop.hostel.toLowerCase()}.jpeg`)} alt="404" classname='img' />
+                    <h2 className='ab'>{shop.name}</h2>
+                    <img src={require(`../assets/${shop.name.toLowerCase()}.jpeg`)} alt="404" classname='img' />
                     </div>
                 ))}
             </div>
