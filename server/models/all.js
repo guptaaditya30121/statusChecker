@@ -21,7 +21,11 @@ const allSchema = new Schema({
     },
     username:{
         type: String,
-        unique: [true , "Email Exists"],
+        unique: [true , "USername already Exists"],
+    },
+    email:{
+        type: String,
+        unique: [true , "You have already registered"]
     },
     //password: the salted and hashed representation of the user's password.
     password:{

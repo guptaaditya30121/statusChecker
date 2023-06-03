@@ -5,7 +5,7 @@ import '../pages/canteen.css'
 import { useState , useEffect } from 'react';
 const API_BASE = "http://localhost:3002";
 
-export default function Canteen() {
+export default function Canteen(props) {
     const [shops , setShops] = useState([]);
     useEffect(()=>{
         GetShops()
@@ -31,7 +31,7 @@ export default function Canteen() {
         );
     return (
         <div >
-            <Navbar count={2} />
+            <Navbar count={2} auth={props.auth}/>
             <div className="content1">
                 <h1>ACTIVE CANTEENS...({activeCanteens.length})</h1>
             </div>

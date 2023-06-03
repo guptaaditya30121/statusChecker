@@ -1,14 +1,57 @@
-import React from 'react'
+import React, { useEffect,useState } from 'react'
+import  { useNavigate } from 'react-router-dom'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
-import { Link } from 'react-router-dom';
-import { ToastContainer, toast } from 'react-toastify';
+import { Link, redirect } from 'react-router-dom';
+//import { ToastContainer, toast } from 'react-toastify';
 import '../pages/home.css';
 export default function Home() {
+  const navigate = useNavigate();
+  const [user , setUser] = useState("");
+  const [auth , setAuth] = useState(false);
+  useEffect(()=>{
+    fetch("http://localhost:3002/", {
+      method: "GET",
+      credentials: "include",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Credentials": true
+      }
+    })
+      .then(response => {
+       
+        console.log(response);
+        if (response.status === 200) return response.json();
+        console.log("not done");
+        navigate('/');
+        throw new Error("failed to authenticate user");
+        //correct way to stop the further then chain
+        
+      })
+      .then(responseJson => {
+        // this.setState({
+        //   authenticated: true,
+        //   user: responseJson.user
+        // });
+          setUser(responseJson.user);
+          setAuth(true);
+      })
+      .catch(error => {
+        // this.setState({
+        //   authenticated: false,
+        //   error: "Failed to authenticate user"
+        // });
+          setAuth(false);
+
+      });
+  },[])
+
   return (
+  auth &&
     <div >
       
-       <Navbar count={1}/>
+       <Navbar count={1} auth={auth}/>
        <div className='heading'>
        <h1>WHAT YOU WANT TO LOOK FOR ... ?</h1>
        </div>

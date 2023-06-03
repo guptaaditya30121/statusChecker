@@ -12,6 +12,7 @@ export default function Register({check=0}) {
   const [type , setType] = useState(0);
   const [username , setUsername] = useState("");
   const [password , setPassword] = useState("");
+  const [email , setEmail] = useState("");
   const [phone , setContactNo] = useState("");
   const navigate = useNavigate();
   const post = (e) =>{
@@ -74,15 +75,15 @@ export default function Register({check=0}) {
         return;
     }
     
-    fetch(API_BASE + "/shops/new",{
+    fetch(API_BASE + "/shops/send-mail",{
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({fname,type,username,password,phone})
+      body: JSON.stringify({fname,type,username,email,password,phone})
       }
   )
   .then((response) => response.json())
   .then( (data) => {
-   toast.success('Successfully Registered!', {
+   toast.success('Email has been sent sucessfully', {
       position: "bottom-right",
       autoClose: 5000,
       hideProgressBar: false,
@@ -138,6 +139,8 @@ export default function Register({check=0}) {
         <br/>
         <label for="username" className='tx' >Set Username: </label>
         <input type="text" id="username" name="username" className='tx1' value={username} onChange={(e)=>{setUsername(e.target.value)}}/><br/><br/>
+        <label for="username" className='tx' >Set Email: </label>
+        <input type="text" id="email" name="email" className='tx1' value={email} onChange={(e)=>{setEmail(e.target.value)}}/><br/><br/>
         <label for="password" className='tx' >Set Password : </label>
         <input type="password" id="password" name="password" className='tx1' value={password} onChange={(e)=>{setPassword(e.target.value)}}/><br/><br/>
         <label for="contact" className='tx' >Contact No. &nbsp;&nbsp;: </label>

@@ -5,7 +5,7 @@ import '../pages/canteen.css'
 import { useState , useEffect } from 'react';
 const API_BASE = "http://localhost:3002";
 
-export default function Stationary() {
+export default function Stationary(props) {
     const [shops , setShops] = useState([]);
     useEffect(()=>{
         GetShops()
@@ -30,7 +30,7 @@ export default function Stationary() {
         );
     return (
         <div >
-            <Navbar count={4} />
+            <Navbar count={4} auth={props.auth}/>
             <div className="content1">
                 <h1>ACTIVE STATIONARIES...({activeStationary.length})</h1>
             </div>

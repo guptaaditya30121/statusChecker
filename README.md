@@ -44,3 +44,61 @@ which is stored as cookies and the viewer can see the logged in required
 page untill jwt is stored in cookies
 It consists of three parts header , payload, verify signature
 
+
+
+OAuth(or Open Authorization) is one of the approaches for authenticating a user in an application. It makes it much easier and faster for an end-user to choose a social login(Google, Outlook, or Twitter, etc) to signup on an application rather than the traditional (email/password) signup form.
+
+I registered on microsoft azure.
+
+passport-->It is an authentication middleware and can be easily configured with express. 
+We will be setting up token-based redirection basis social login in our app.
+
+
+The flow of my app is like 
+-> first on click to signin , I will go to backend than beckend will initiate google 
+auth procedure and than id is encrypted and stored as cookie 
+-> than I transfer the connection to front-end
+->now front-end will check for the cookie
+
+
+
+
+
+
+Session --> series of request and response each associated woth the same user
+HTTP is a stateless protocol meaning that each request to an applucation can be understood in isolation without any context from previous request.So need to 
+remember user across different requests. Session stored in cookie creates
+In effect, this creates a stateful protocol on top of HTTP.
+
+
+app.use(passport.initialize())
+app.use(passport.session())
+they call serialize and deserialize after every request
+An HTTP cookie contains encrypted data about the user and how the long sessions last
+Serialization is when the user gets encrypted from the database and sends it back to the browser as a cookie.
+Deserialization is to refresh the Express session’s record of the current user (from `req.user`) using the latest data from the database.
+
+
+
+Application architecture
+This is how our login flow will look like:
+https://www.codingdeft.com/_next/image/?url=https%3A%2F%2Fcodingdeft-images.s3.amazonaws.com%2Fpublic%2Fimg%2Fposts%2Freact-authentication-mern-node-passport-express-mongo%2FDiagram_Login_Registration.png&w=2048&q=75
+Login and Registration Architecture
+This is how an authenticated request would look like:
+https://www.codingdeft.com/_next/image/?url=https%3A%2F%2Fcodingdeft-images.s3.amazonaws.com%2Fpublic%2Fimg%2Fposts%2Freact-authentication-mern-node-passport-express-mongo%2FDiagram_Fetch_My_Details.png&w=2048&q=75
+Authenticated Request
+
+
+first question that came to my mind was jwt vs cookies
+
+
+Usually JWT expiry time is kept low, to prevent attcks from outside 
+becoz if once stolen csn use our information. We keep refresh Tokens in cookies
+Refresh token is stored to database and we have to check against our database
+Also, since refreshToken is stored in the database, we can invalidate a user session easily by deleting the refresh token or marking it is invalid in the database.
+
+mongoose - ODM for mongoDB.(OBLECT DATA MODELLING)
+
+difference between authorisation and authentication
+
+SMTP->Simple Mail Transfer Protocol

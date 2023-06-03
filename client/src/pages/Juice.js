@@ -5,7 +5,7 @@ import '../pages/canteen.css'
 import { useState , useEffect } from 'react';
 const API_BASE = "http://localhost:3002";
 
-export default function Juice() {
+export default function Juice(props) {
     const [shops , setShops] = useState([]);
     useEffect(()=>{
         GetShops()
@@ -29,8 +29,10 @@ export default function Juice() {
         shop.category === 2 && shop.status === false
         );
     return (
+        <>
+       
         <div >
-            <Navbar count={3} />
+            <Navbar count={3} auth={props.auth} />
             <div className="content1">
                 <h1>ACTIVE JUICE CENTRES...({activeJuice.length})</h1>
             </div>
@@ -56,5 +58,7 @@ export default function Juice() {
             </div>
             <Footer />
         </div>
+        
+        </>
     )
 }
