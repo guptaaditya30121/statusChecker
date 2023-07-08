@@ -56,4 +56,16 @@ Set your local Environment following the steps given in the intallation section
 
 This page comes on your screen as the first page of website. For Students, you can click on google auth button and than you will be 
 directed to home page. For ShopOwners, click on another button.
-![](images/login.jpeg)
+
+![](images/signin.jpeg)
+
+---
+
+#### Home
+
+From this page you can go to whichever section you want to visit.
+
+
+![](images/home.jpeg)
+
+---
