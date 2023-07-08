@@ -212,7 +212,10 @@ app.get('/shops/new/:token' , (req,res)=>{
             status : true
         });
         newUser.save();
-        res.json(newUser);
+        res.writeHead(302, {
+            Location: 'http://localhost:3000/'
+        });
+        res.end();
     }catch(error){
         console.log(error.message);
         res.send("something went wrong");

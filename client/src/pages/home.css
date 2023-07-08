@@ -3,14 +3,14 @@
     text-align: center;
     font-family: 'Playfair Display', serif;
     letter-spacing: 0.1rem;
-    margin-bottom: 10vh;
+    margin-bottom: 1vh;
     
 }
 .cards{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-bottom: 25vh;
+    margin-bottom: 2vh;
 }
 .card{
     text-align: center;

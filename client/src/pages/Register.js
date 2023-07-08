@@ -136,7 +136,7 @@ export default function Register({check=0}) {
             <option value={2} className='tx1'>Juice Centre</option>
             <option value={3} className='tx1'>Stationaries</option>
         </select>
-        <br/>
+        
         <label for="username" className='tx' >Set Username: </label>
         <input type="text" id="username" name="username" className='tx1' value={username} onChange={(e)=>{setUsername(e.target.value)}}/><br/><br/>
         <label for="username" className='tx' >Set Email: </label>
@@ -145,7 +145,7 @@ export default function Register({check=0}) {
         <input type="password" id="password" name="password" className='tx1' value={password} onChange={(e)=>{setPassword(e.target.value)}}/><br/><br/>
         <label for="contact" className='tx' >Contact No. &nbsp;&nbsp;: </label>
         <input type="string" id="phone" name="phone" className='tx1' value={phone} onChange={(e)=>{setContactNo(e.target.value)}}/><br/><br/>
-        <br/><br/><br/>
+        
                         <button className='butt' onClick={post} >Submit</button>
                         <button type="reset" className='butt'>Reset</button>
     </form>

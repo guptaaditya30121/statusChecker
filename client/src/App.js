@@ -20,6 +20,7 @@ function App() {
   const [auth , setAuth] = useState(false);
   const [shopauth , setShopauth] = useState(false);
   useEffect(()=>{
+    console.log("hello");
     fetch("http://localhost:3002/", {
       method: "GET",
       credentials: "include",

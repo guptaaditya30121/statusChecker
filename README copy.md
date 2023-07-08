@@ -102,14 +102,3 @@ mongoose - ODM for mongoDB.(OBLECT DATA MODELLING)
 difference between authorisation and authentication
 
 SMTP->Simple Mail Transfer Protocol
-
-
-
-
-
-
-
-//Tell me about your schema 
-//My model for shops contains different things. I have attached a middleware with it
-it runs before we save any shop or modify the password to our database and hash the password
-next();: This function call proceeds to the next middleware or saves the document if there are no more middleware functions.
