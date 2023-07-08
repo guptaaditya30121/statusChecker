@@ -96,3 +96,28 @@ This page displays all the stationaries which are open and which are closed in d
 ![](images/stationary.jpeg)
 
 ---
+
+### Update
+
+This page allows shopkeepers to update their status, whenever they open or close their shops.
+
+
+![](images/update.jpeg)
+
+---
+
+### Register
+
+This page allows new shop owners to register their shop with us
+
+![](images/register.jpeg)
+
+---
+
+
+## Author Info
+
+#### Aditya Gupta
+
+- Email - [aditya.cse21@iitg.ac.in](mailto:aditya.cse21@iitg.ac.in)
+- Github - [guptaaditya30121](https://github.com/guptaaditya30121)
