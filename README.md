@@ -114,6 +114,24 @@ This page allows new shop owners to register their shop with us
 
 ---
 
+# Installation
+
+- Step 1: Clone this repository into your local machine. (See [here](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository))
+- Step 2: Install all the dependencies. 
+```bash
+npm install
+```
+- Step 3: Run the client. 
+```bash
+npm start
+```
+
+- Step 3: Run the server. 
+```bash
+npm start
+```
+
+---
 
 ## Author Info
 
