@@ -52,7 +52,7 @@ Set your local Environment following the steps given in the intallation section
 
 ---
 
-#### Login
+### Login
 
 This page comes on your screen as the first page of website. For Students, you can click on google auth button and than you will be 
 directed to home page. For ShopOwners, click on another button.
@@ -61,11 +61,38 @@ directed to home page. For ShopOwners, click on another button.
 
 ---
 
-#### Home
+### Home
 
 From this page you can go to whichever section you want to visit.
 
 
-![](images/home.jpeg)
+![](images/Home.jpeg)
+
+---
+
+### Canteens
+
+This page displays all the canteens which are open and which are closed in different sections.
+
+
+![](images/canteens.jpeg)
+
+---
+
+### Juice-centres
+
+This page displays all the juice centres which are open and which are closed in different sections.
+
+
+![](images/juice.jpeg)
+
+---
+
+### Stationaries
+
+This page displays all the stationaries which are open and which are closed in different sections.
+
+
+![](images/stationary.jpeg)
 
 ---
