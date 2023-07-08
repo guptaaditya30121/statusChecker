@@ -2,7 +2,7 @@ The react-router-dom package is commonly used in React applications for implemen
 
 Client-side routing, also known as single-page application (SPA) routing, is a technique used in web applications to handle navigation and page transitions on the client side without performing a full page reload.
 
-Traditionally, when a user clicks on a link or submits a form on a web page, the browser sends a request to the server, and the server responds by sending a new HTML page. This process is known as server-side rendering (SSR)
+Traditionally, when a user clicks on a link or submits a form on a web page, the browser sends a requ est to the server, and the server responds by sending a new HTML page. This process is known as server-side rendering (SSR)
 
 Frameworks and libraries like React Router, Vue Router, and Angular Router provide client-side routing capabilities
 
